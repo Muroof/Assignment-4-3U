@@ -20,7 +20,6 @@ public class A4Q7 {
         Scanner input = new Scanner(System.in);
 
         // Ask the user for dice stuff
-
         // first square
         int square = 1;
 
@@ -29,19 +28,16 @@ public class A4Q7 {
             // ask for the sum of the dice
             System.out.println("Enter sum of dice:");
             int roll = input.nextInt();
-            
+
             if (roll < 2 && roll > 12) {
                 System.out.println("YOU QUIT HAHAHA");
             }
-            
+
             // allow only legal rolls between 2 and 12
             if (roll >= 2 && roll <= 12) {
 
                 square = roll + square;
-            } 
-
-
-
+            }
 
             // ALL SNAKES
             // if you land on 54, you'll slide down to 19
@@ -71,12 +67,10 @@ public class A4Q7 {
                 square = square + 19;
             }
 
-
-
             // if you land on a sqaure past 100, stay put
             if (square > 100) {
                 square = square - roll;
-                System.out.println("Whoops, you rolled past 100, so you'll stay at " + square );
+                System.out.println("Whoops, you rolled past 100, so you'll stay at " + square);
             }
 
             // outputs what sqaure you a currently on
@@ -86,17 +80,7 @@ public class A4Q7 {
                 System.out.println("YOU WIN!");
             }
 
-
-
-
-
         }
-
-
-
-
-
-
 
     }
 }

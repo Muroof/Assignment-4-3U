@@ -21,14 +21,11 @@ public class A4Q6 {
 
         // ask the user to input measurement in inches
         // use this to calculate the measurement into centimetres
-
         System.out.println("Enter the speed limit:");
         double limit = input.nextInt();
 
         System.out.println("Enter your speed:");
         double speed = input.nextInt();
-
-
 
         if (speed <= limit) {
 
@@ -38,22 +35,14 @@ public class A4Q6 {
 
             System.out.println("You are speeding and your fine is $270");
 
-
         } else if (speed >= limit + 31) {
 
             System.out.println("You are speeding and your fine is $500");
 
-        }
-
-        else if (speed > limit) {
+        } else if (speed > limit) {
             System.out.println("You are speeding and your fine is $100");
 
-
-
         }
-
-
-
 
     }
 }

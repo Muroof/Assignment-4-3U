@@ -106,16 +106,16 @@ public class A4Q10 extends javax.swing.JFrame {
     private void toCelsiusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toCelsiusButtonActionPerformed
         String celsiusString = celsiusField.getText();
         String fahrenheitString = fahrenheitField.getText();
-        
+
         // convert strings to doubles
         double fahrenheitNumber = Double.parseDouble(fahrenheitString);
-        
+
         // sets celsius number as converted fahrenheit number
         double celsiusNumber = (((fahrenheitNumber - 32) * 5) / 9);
-        
+
         // rounds to nearest whole number
         celsiusNumber = Math.round(celsiusNumber);
-        
+
         // display answer in resultOutput
         celsiusField.setText("" + celsiusNumber);
     }//GEN-LAST:event_toCelsiusButtonActionPerformed
@@ -123,16 +123,16 @@ public class A4Q10 extends javax.swing.JFrame {
     private void toFahrenheitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toFahrenheitButtonActionPerformed
         String celsiusString = celsiusField.getText();
         String fahrenheitString = fahrenheitField.getText();
-        
+
         // convert strings to doubles
         double celsiusNumber = Double.parseDouble(celsiusString);
-        
+
         // sets celsius number as converted fahrenheit number
         double fahrenheitNumber = (((celsiusNumber * 9) / 5) + 32);
-        
+
         // rounds to nearest whole number
         fahrenheitNumber = Math.round(fahrenheitNumber);
-        
+
         // display answer in resultOutput
         fahrenheitField.setText("" + fahrenheitNumber);
     }//GEN-LAST:event_toFahrenheitButtonActionPerformed

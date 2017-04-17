@@ -5,7 +5,6 @@ import java.util.Scanner;
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author ranam3235
@@ -21,7 +20,6 @@ public class A4Q2 {
 
         // ask the user to input measurement in inches
         // use this to calculate the measurement into centimetres
-        
         System.out.println("Please enter the measurement in inches you wish to convert:");
         int inches = input.nextInt();
         // calculate how many centimetres
@@ -29,7 +27,6 @@ public class A4Q2 {
         if (cm > 0) {
             System.out.println("OKAY HERE YOU GO: " + cm);
         }
-        
-        
+
     }
 }

@@ -87,12 +87,11 @@ public class A4Q8 extends javax.swing.JFrame {
     }//GEN-LAST:event_nameActionPerformed
 
     private void helloButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helloButtonActionPerformed
-       
+
         String name2 = name.getText();
-        
+
         Output.setText("Hello " + name2);
-        
-        
+
     }//GEN-LAST:event_helloButtonActionPerformed
 
     /**

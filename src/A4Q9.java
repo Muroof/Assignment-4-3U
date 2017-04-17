@@ -140,27 +140,25 @@ public class A4Q9 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void resultOutputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultOutputActionPerformed
-        
+
     }//GEN-LAST:event_resultOutputActionPerformed
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // gather numbers from input fields as strings
-        
+
         String firstNumberString = firstNumberInput.getText();
         String secondNumberString = secondNumberInput.getText();
-        
+
         // convert strings to doubles
         double firstNumber = Double.parseDouble(firstNumberString);
         double secondNumber = Double.parseDouble(secondNumberString);
-        
+
         // add firstNumber and secondNumber
         double addTotal = firstNumber + secondNumber;
-        
+
         // display answer in resultOutput
         resultOutput.setText("" + addTotal);
-        
-        
-        
+
     }//GEN-LAST:event_addButtonActionPerformed
 
     private void firstNumberInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNumberInputActionPerformed
@@ -169,51 +167,51 @@ public class A4Q9 extends javax.swing.JFrame {
 
     private void mulButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulButtonActionPerformed
         // gather numbers from input fields as strings
-        
+
         String firstNumberString = firstNumberInput.getText();
         String secondNumberString = secondNumberInput.getText();
-        
+
         // convert strings to doubles
         double firstNumber = Double.parseDouble(firstNumberString);
         double secondNumber = Double.parseDouble(secondNumberString);
-        
+
         // multiply firstNumber and secondNumber
         double mulTotal = firstNumber * secondNumber;
-        
+
         // display answer in resultOutput
         resultOutput.setText("" + mulTotal);
     }//GEN-LAST:event_mulButtonActionPerformed
 
     private void subButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subButtonActionPerformed
         // gather numbers from input fields as strings
-        
+
         String firstNumberString = firstNumberInput.getText();
         String secondNumberString = secondNumberInput.getText();
-        
+
         // convert strings to doubles
         double firstNumber = Double.parseDouble(firstNumberString);
         double secondNumber = Double.parseDouble(secondNumberString);
-        
+
         // sub firstNumber and secondNumber
         double subTotal = firstNumber - secondNumber;
-        
+
         // display answer in resultOutput
         resultOutput.setText("" + subTotal);
     }//GEN-LAST:event_subButtonActionPerformed
 
     private void divButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divButtonActionPerformed
         // gather numbers from input fields as strings
-        
+
         String firstNumberString = firstNumberInput.getText();
         String secondNumberString = secondNumberInput.getText();
-        
+
         // convert strings to doubles
         double firstNumber = Double.parseDouble(firstNumberString);
         double secondNumber = Double.parseDouble(secondNumberString);
-        
+
         // div firstNumber from secondNumber
         double divTotal = firstNumber / secondNumber;
-        
+
         // display answer in resultOutput
         resultOutput.setText("" + divTotal);
     }//GEN-LAST:event_divButtonActionPerformed
