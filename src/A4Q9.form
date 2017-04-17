@@ -26,31 +26,24 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="firstNumberLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="143" max="-2" attributes="0"/>
-                      <Component id="firstNumberInput" pref="59" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="secondNumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="resultLabel" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="secondNumberInput" max="32767" attributes="0"/>
-                          <Component id="resultOutput" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <Component id="secondNumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="resultLabel" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="firstNumberLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="firstNumberInput" max="32767" attributes="0"/>
+                  <Component id="resultOutput" pref="59" max="32767" attributes="0"/>
+                  <Component id="secondNumberInput" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Component id="addButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
               <Component id="subButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="mulButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="divButton" min="-2" max="-2" attributes="0"/>
@@ -79,9 +72,9 @@
               <EmptySpace pref="43" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="addButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="subButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="mulButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="divButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="subButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
           </Group>
@@ -127,20 +120,29 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addButtonActionPerformed"/>
       </Events>
     </Component>
+    <Component class="javax.swing.JToggleButton" name="mulButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mul"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mulButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="divButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Div"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="divButtonActionPerformed"/>
+      </Events>
+    </Component>
     <Component class="javax.swing.JToggleButton" name="subButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Sub"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="mulButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Mul"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="divButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Div"/>
-      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="subButtonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

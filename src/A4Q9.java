@@ -32,9 +32,9 @@ public class A4Q9 extends javax.swing.JFrame {
         secondNumberInput = new javax.swing.JTextField();
         resultOutput = new javax.swing.JTextField();
         addButton = new javax.swing.JToggleButton();
+        mulButton = new javax.swing.JToggleButton();
+        divButton = new javax.swing.JToggleButton();
         subButton = new javax.swing.JToggleButton();
-        mulButton = new javax.swing.JButton();
-        divButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,11 +64,26 @@ public class A4Q9 extends javax.swing.JFrame {
             }
         });
 
-        subButton.setText("Sub");
-
         mulButton.setText("Mul");
+        mulButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mulButtonActionPerformed(evt);
+            }
+        });
 
         divButton.setText("Div");
+        divButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                divButtonActionPerformed(evt);
+            }
+        });
+
+        subButton.setText("Sub");
+        subButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -77,25 +92,21 @@ public class A4Q9 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(firstNumberLabel)
-                        .addGap(143, 143, 143)
-                        .addComponent(firstNumberInput, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(secondNumberLabel)
-                            .addComponent(resultLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(129, 129, 129)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(secondNumberInput)
-                            .addComponent(resultOutput))))
+                    .addComponent(secondNumberLabel)
+                    .addComponent(resultLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(firstNumberLabel))
+                .addGap(129, 129, 129)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(firstNumberInput)
+                    .addComponent(resultOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(secondNumberInput))
                 .addGap(90, 90, 90))
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(addButton)
-                .addGap(18, 18, 18)
+                .addGap(13, 13, 13)
                 .addComponent(subButton)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(mulButton)
                 .addGap(18, 18, 18)
                 .addComponent(divButton)
@@ -119,9 +130,9 @@ public class A4Q9 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addButton)
-                    .addComponent(subButton)
                     .addComponent(mulButton)
-                    .addComponent(divButton))
+                    .addComponent(divButton)
+                    .addComponent(subButton))
                 .addGap(44, 44, 44))
         );
 
@@ -133,12 +144,79 @@ public class A4Q9 extends javax.swing.JFrame {
     }//GEN-LAST:event_resultOutputActionPerformed
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-        // TODO add your handling code here:
+        // gather numbers from input fields as strings
+        
+        String firstNumberString = firstNumberInput.getText();
+        String secondNumberString = secondNumberInput.getText();
+        
+        // convert strings to doubles
+        double firstNumber = Double.parseDouble(firstNumberString);
+        double secondNumber = Double.parseDouble(secondNumberString);
+        
+        // add firstNumber and secondNumber
+        double addTotal = firstNumber + secondNumber;
+        
+        // display answer in resultOutput
+        resultOutput.setText("" + addTotal);
+        
+        
+        
     }//GEN-LAST:event_addButtonActionPerformed
 
     private void firstNumberInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNumberInputActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_firstNumberInputActionPerformed
+
+    private void mulButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulButtonActionPerformed
+        // gather numbers from input fields as strings
+        
+        String firstNumberString = firstNumberInput.getText();
+        String secondNumberString = secondNumberInput.getText();
+        
+        // convert strings to doubles
+        double firstNumber = Double.parseDouble(firstNumberString);
+        double secondNumber = Double.parseDouble(secondNumberString);
+        
+        // multiply firstNumber and secondNumber
+        double mulTotal = firstNumber * secondNumber;
+        
+        // display answer in resultOutput
+        resultOutput.setText("" + mulTotal);
+    }//GEN-LAST:event_mulButtonActionPerformed
+
+    private void subButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subButtonActionPerformed
+        // gather numbers from input fields as strings
+        
+        String firstNumberString = firstNumberInput.getText();
+        String secondNumberString = secondNumberInput.getText();
+        
+        // convert strings to doubles
+        double firstNumber = Double.parseDouble(firstNumberString);
+        double secondNumber = Double.parseDouble(secondNumberString);
+        
+        // sub firstNumber and secondNumber
+        double subTotal = firstNumber - secondNumber;
+        
+        // display answer in resultOutput
+        resultOutput.setText("" + subTotal);
+    }//GEN-LAST:event_subButtonActionPerformed
+
+    private void divButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divButtonActionPerformed
+        // gather numbers from input fields as strings
+        
+        String firstNumberString = firstNumberInput.getText();
+        String secondNumberString = secondNumberInput.getText();
+        
+        // convert strings to doubles
+        double firstNumber = Double.parseDouble(firstNumberString);
+        double secondNumber = Double.parseDouble(secondNumberString);
+        
+        // div firstNumber from secondNumber
+        double divTotal = firstNumber / secondNumber;
+        
+        // display answer in resultOutput
+        resultOutput.setText("" + divTotal);
+    }//GEN-LAST:event_divButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,10 +254,10 @@ public class A4Q9 extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton addButton;
-    private javax.swing.JButton divButton;
+    private javax.swing.JToggleButton divButton;
     private javax.swing.JTextField firstNumberInput;
     private javax.swing.JLabel firstNumberLabel;
-    private javax.swing.JButton mulButton;
+    private javax.swing.JToggleButton mulButton;
     private javax.swing.JLabel resultLabel;
     private javax.swing.JTextField resultOutput;
     private javax.swing.JTextField secondNumberInput;
